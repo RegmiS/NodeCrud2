@@ -4,7 +4,10 @@
   "description": "Another crud app for node, used to learn some more packages, and this time MongoDb",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/index.js",
+    "dev": "nodemon --exec babel-node src/index.js",
+    "build": "babel src -d dist"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,14 @@
   "bugs": {
     "url": "https://github.com/RegmiS/NodeCrud2/issues"
   },
-  "homepage": "https://github.com/RegmiS/NodeCrud2#readme"
+  "homepage": "https://github.com/RegmiS/NodeCrud2#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.5",
+    "@babel/node": "^7.18.5",
+    "@babel/preset-env": "^7.18.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1"
+  }
 }
