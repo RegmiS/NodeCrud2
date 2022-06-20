@@ -1,0 +1,20 @@
+{
+  "name": "NodeCrud2",
+  "version": "1.0.0",
+  "description": "Another crud app for node, used to learn some more packages, and this time MongoDb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RegmiS/NodeCrud2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RegmiS/NodeCrud2/issues"
+  },
+  "homepage": "https://github.com/RegmiS/NodeCrud2#readme"
+}
