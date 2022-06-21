@@ -23,3 +23,10 @@ sudo kill $(sudo lsof -t -i:5000)
 ```
   - -i is whatever port is assigned in the .env file
 (this solution did not end up working, ended up switching the connection to port 7000)
+
+#### Fix for connecting to mongodb - unable to start the database error
+```bash
+sudo chown -R mongodb:mongodb /var/lib/mongodb
+sudo chown mongodb:mongodb /tmp/mongodb-27017.sock    
+sudo service mongod restart
+```
