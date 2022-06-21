@@ -17,4 +17,9 @@ Solved this error by doing npm i --save express dotenv helmet cors
 
 
 #### Run script by doing npm run dev
-
+- If it gives an error that a program is already running on that port, had to do:
+```bash
+sudo kill $(sudo lsof -t -i:5000)
+```
+  - -i is whatever port is assigned in the .env file
+(this solution did not end up working, ended up switching the connection to port 7000)
