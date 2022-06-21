@@ -9,3 +9,12 @@ PORT = 5000
 DATABASE_URL = mongodb://localhost/databasename
 ```
 
+Ran into a problem where it displayed that
+```
+Error: Cannot find module 'express'
+```
+Solved this error by doing npm i --save express dotenv helmet cors
+
+
+#### Run script by doing npm run dev
+
