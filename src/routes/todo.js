@@ -31,4 +31,15 @@ router.post('/', async (req, res) => {
     })
 })
 
+router.get('/', async (_req, res) => {
+    // sending all data to response
+    const todos = await Todo.find()
+  
+    return res.json({
+      success: true,
+      data: todos,
+      message: 'Request successful!',
+    })
+})
+
 export default router
