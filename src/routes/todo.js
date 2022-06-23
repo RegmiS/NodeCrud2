@@ -42,4 +42,33 @@ router.get('/', async (_req, res) => {
     })
 })
 
+router.get('/:id', async (req, res) => {
+    if (!Mongoose.Types.ObjectId.isValid(req.params.id))
+      return res.status(404).json({
+        success: false,
+        data: [],
+        message: 'It is not a valid mongodb id',
+      })
+  
+    // search using id In mongodb with mongoose
+    const todo = await Todo.findById(req.params.id)
+  
+    // checking if todo not found then 404 request
+    if (!todo)
+      return res.status(404).json(
+        res.json({
+          success: false,
+          data: [],
+          message: 'There is no data found related to this id!',
+        })
+      )
+  
+    // if found then send the response
+    return res.json({
+      success: true,
+      data: todo,
+      message: 'Finding successful!',
+    })
+})
+
 export default router
