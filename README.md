@@ -30,3 +30,13 @@ sudo chown -R mongodb:mongodb /var/lib/mongodb
 sudo chown mongodb:mongodb /tmp/mongodb-27017.sock    
 sudo service mongod restart
 ```
+
+#### Routing
+After running the app using npm run dev, at this stage, I was able to do a post request in Postman
+with post and at http://localhost:7000/api/v1
+with the input in body of:
+```json
+{
+  "title":"test of post"
+}
+```

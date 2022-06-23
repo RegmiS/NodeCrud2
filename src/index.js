@@ -5,6 +5,7 @@ import Helmet from 'helmet';
 import RateLimit from 'express-rate-limit';
 import Morgan from 'morgan';
 import Mongoose from 'mongoose';
+import Todo from './routes/todo'
 
 const limiter = RateLimit({
     windowMs: 15 * 60 * 1000,
@@ -25,6 +26,7 @@ Mongoose.connect(process.env.DATABASE_URL)
 .then(()=>console.log('Connected to mongo db'))
 .catch((err) => console.log(`Could not connect to MongoDB...${err}`));
 
+app.use('/api/v1', Todo)
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`listening on port ${port}`));
